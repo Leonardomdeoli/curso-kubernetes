@@ -94,3 +94,4 @@ kubectl get replicasets
 NAME       DESIRED   CURRENT   READY   AGE
 goserver   2         2         2       2m28s
 ````
+
