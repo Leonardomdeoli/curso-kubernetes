@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -10,5 +11,8 @@ func main() {
 }
 
 func Hello(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("<h1>Hello Full Cycle</h1>"))
+	name := os.Getenv("NAME")
+	age := os.Getenv("AGE")
+
+	w.Write([]byte("<h1>Nome</h1>" + name + "</br><h1>Idade</h1>" + age))
 }
